@@ -2,7 +2,7 @@
 
 client_id = "4b6ac34b40356c2785ee772f0530beea"
 name = "inventory-health-dashboard"
-application_url = "https://example.com"
+application_url = "https://inventory-health-app.onrender.com"
 embedded = true
 
 [build]
@@ -23,7 +23,10 @@ api_version = "2026-10"
 [access_scopes]
 scopes = "read_products,write_products,read_inventory,read_orders,read_locations"
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://inventory-health-app.onrender.com/auth/callback",
+  "https://inventory-health-app.onrender.com/auth/shopify/callback"
+]
 
 [product.metafields.app.demo_info]
 type = "single_line_text_field"
